@@ -163,8 +163,8 @@ syn keyword     sqfCommand      currentweaponmode currentweaponturret
 syn keyword     sqfCommand      currentzeroing cursortarget customchat
 syn keyword     sqfCommand      customradio cutfadeout cutobj cutrsc cuttext
 syn keyword     sqfCommand      damage date datetonumber daytime deactivatekey
-syn keyword     sqfCommand      debriefingtext debugfsm debuglog default deg
-syn keyword     sqfCommand      deleteat deletecenter deletecollection
+syn keyword     sqfCommand      debriefingtext debugfsm debuglog deg deleteat
+syn keyword     sqfCommand      deletecenter deletecollection
 syn keyword     sqfCommand      deleteeditorobject deletegroup deleteidentity
 syn keyword     sqfCommand      deletelocation deletemarker deletemarkerlocal
 syn keyword     sqfCommand      deleterange deleteresources deletesite
@@ -597,8 +597,8 @@ syn keyword     sqfCommand      worldtomodelvisual worldtoscreen
 " arbitrary. Mostly it's anything that involves the CODE type or has anything to
 " do with controlling program flow and execution or whatever.
 syn keyword     sqfStatement    call callextension case commandfsm compile
-syn keyword     sqfStatement    compilefinal count do dofsm else execfsm
-syn keyword     sqfStatement    execvm exitwith for foreach from if
+syn keyword     sqfStatement    compilefinal count default do dofsm else
+syn keyword     sqfStatement    execfsm execvm exitwith for foreach from if
 syn keyword     sqfStatement    preprocessfile preprocessfilelinenumbers
 syn keyword     sqfStatement    scriptdone sleep spawn switch terminate then
 syn keyword     sqfStatement    to waituntil while
