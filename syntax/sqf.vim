@@ -415,10 +415,9 @@ syn keyword     sqfCommand      safezoney savegame saveidentity savejoysticks
 syn keyword     sqfCommand      saveoverlay saveprofilenamespace savestatus
 syn keyword     sqfCommand      savevar savingenabled say say2d say3d
 syn keyword     sqfCommand      scopename score scoreside screentoworld
-syn keyword     sqfCommand      scriptname scriptnull scudstate
-syn keyword     sqfCommand      secondaryweapon secondaryweaponitems
-syn keyword     sqfCommand      secondaryweaponmagazine select
-syn keyword     sqfCommand      selectbestplaces selectdiarysubject
+syn keyword     sqfCommand      scriptname scudstate secondaryweapon
+syn keyword     sqfCommand      secondaryweaponitems secondaryweaponmagazine
+syn keyword     sqfCommand      select selectbestplaces selectdiarysubject
 syn keyword     sqfCommand      selectededitorobjects selecteditorobject
 syn keyword     sqfCommand      selectionposition selectleader selectnoplayer
 syn keyword     sqfCommand      selectplayer selectweapon selectweaponturret
@@ -607,7 +606,8 @@ syn keyword     sqfStatement    to waituntil while
 " Not sure about these ones ...
 syn keyword     sqfConstant     civilian controlnull displaynull east grpnull
 syn keyword     sqfConstant     locationnull netobjnull nil objnull resistance
-syn keyword     sqfConstant     sideunknown tasknull teammembernull west
+syn keyword     sqfConstant     scriptnull sideunknown tasknull teammembernull
+syn keyword     sqfConstant     west
 
 syn keyword     sqfBoolean      yes no true false
 
