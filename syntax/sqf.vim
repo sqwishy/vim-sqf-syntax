@@ -2,7 +2,7 @@
 " Language:        SQF Script (used in Bohemia Interactives ArmA/ArmA2/etc.)
 " Original Author: shreds-of-sanity@gmx.net
 " Modified By:     somebody@froghat.ca
-" Last modified for Arma 3 version 1.32
+" Last modified for Arma 3 version 1.34
 
 if exists("b:current_syntax")
   finish
@@ -19,10 +19,11 @@ syn keyword     sqfCommand      addbackpackcargoglobal addbackpackglobal
 syn keyword     sqfCommand      addcamshake addcuratoraddons
 syn keyword     sqfCommand      addcuratorcameraarea addcuratoreditableobjects
 syn keyword     sqfCommand      addcuratoreditingarea addcuratorpoints
-syn keyword     sqfCommand      addeditorobject addeventhandler addgoggles
-syn keyword     sqfCommand      addgroupicon addhandgunitem addheadgear
-syn keyword     sqfCommand      additem additemcargo additemcargoglobal
-syn keyword     sqfCommand      additempool additemtobackpack additemtouniform
+syn keyword     sqfCommand      addeditorobject addeventhandler
+syn keyword     sqfCommand      addforcegeneratorrtd addgoggles addgroupicon
+syn keyword     sqfCommand      addhandgunitem addheadgear additem
+syn keyword     sqfCommand      additemcargo additemcargoglobal additempool
+syn keyword     sqfCommand      additemtobackpack additemtouniform
 syn keyword     sqfCommand      additemtovest addlivestats addmagazine
 syn keyword     sqfCommand      addmagazineammocargo addmagazinecargo
 syn keyword     sqfCommand      addmagazinecargoglobal addmagazineglobal
@@ -37,22 +38,23 @@ syn keyword     sqfCommand      addteammember addtoremainscollector adduniform
 syn keyword     sqfCommand      addvehicle addvest addwaypoint addweapon
 syn keyword     sqfCommand      addweaponcargo addweaponcargoglobal
 syn keyword     sqfCommand      addweaponglobal addweaponpool addweaponturret
-syn keyword     sqfCommand      agent agents aimedattarget aimpos airportside
+syn keyword     sqfCommand      agent agents aimedattarget aimpos
+syn keyword     sqfCommand      airdensitycurvertd airdensityrtd airportside
 syn keyword     sqfCommand      aisfinishheal alive allcurators alldead
 syn keyword     sqfCommand      alldeadmen allgroups allmapmarkers allmines
 syn keyword     sqfCommand      allmissionobjects allow3dmode
 syn keyword     sqfCommand      allowcrewinimmobile
 syn keyword     sqfCommand      allowcuratorlogicignoreareas allowdamage
 syn keyword     sqfCommand      allowdammage allowfileoperations allowfleeing
-syn keyword     sqfCommand      allowgetin allsites allunits allunitsuav ammo
-syn keyword     sqfCommand      and animate animatedoor animationphase
-syn keyword     sqfCommand      animationstate armorypoints asin asltoatl
-syn keyword     sqfCommand      assert assignascargo assignascargoindex
-syn keyword     sqfCommand      assignascommander assignasdriver
-syn keyword     sqfCommand      assignasgunner assignasturret assigncurator
-syn keyword     sqfCommand      assignedcargo assignedcommander assigneddriver
-syn keyword     sqfCommand      assignedgunner assigneditems assignedtarget
-syn keyword     sqfCommand      assignedteam assignedvehicle
+syn keyword     sqfCommand      allowgetin allsites allturrets allunits
+syn keyword     sqfCommand      allunitsuav ammo and animate animatedoor
+syn keyword     sqfCommand      animationphase animationstate armorypoints
+syn keyword     sqfCommand      asin asltoatl assert assignascargo
+syn keyword     sqfCommand      assignascargoindex assignascommander
+syn keyword     sqfCommand      assignasdriver assignasgunner assignasturret
+syn keyword     sqfCommand      assigncurator assignedcargo assignedcommander
+syn keyword     sqfCommand      assigneddriver assignedgunner assigneditems
+syn keyword     sqfCommand      assignedtarget assignedteam assignedvehicle
 syn keyword     sqfCommand      assignedvehiclerole assignitem assignteam
 syn keyword     sqfCommand      assigntoairport atan atan2 atg atltoasl
 syn keyword     sqfCommand      attachedobject attachedobjects attachedto
@@ -80,31 +82,31 @@ syn keyword     sqfCommand      camsetfovrange camsetpos camsetrelpos
 syn keyword     sqfCommand      camsettarget camtarget camusenvg canadd
 syn keyword     sqfCommand      canadditemtobackpack canadditemtouniform
 syn keyword     sqfCommand      canadditemtovest cancelsimpletaskdestination
-syn keyword     sqfCommand      canfire canmove canstand canunloadincombat
-syn keyword     sqfCommand      captive captivenum cbchecked cbsetchecked ceil
-syn keyword     sqfCommand      cheatsenabled checkaifeature classname
-syn keyword     sqfCommand      clearallitemsfrombackpack clearbackpackcargo
-syn keyword     sqfCommand      clearbackpackcargoglobal cleargroupicons
-syn keyword     sqfCommand      clearitemcargo clearitemcargoglobal
-syn keyword     sqfCommand      clearitempool clearmagazinecargo
-syn keyword     sqfCommand      clearmagazinecargoglobal clearmagazinepool
-syn keyword     sqfCommand      clearoverlay clearradio clearweaponcargo
-syn keyword     sqfCommand      clearweaponcargoglobal clearweaponpool
-syn keyword     sqfCommand      closedialog closedisplay closeoverlay
-syn keyword     sqfCommand      collapseobjecttree combatmode
-syn keyword     sqfCommand      commandartilleryfire commandchat commander
-syn keyword     sqfCommand      commandfire commandfollow commandgetout
-syn keyword     sqfCommand      commandingmenu commandmove commandradio
-syn keyword     sqfCommand      commandstop commandtarget commandwatch comment
-syn keyword     sqfCommand      commitoverlay completedfsm composetext
-syn keyword     sqfCommand      configclasses configfile configname
-syn keyword     sqfCommand      connectterminaltouav copyfromclipboard
-syn keyword     sqfCommand      copytoclipboard copywaypoints cos countenemy
-syn keyword     sqfCommand      countfriendly countside counttype countunknown
-syn keyword     sqfCommand      createagent createcenter createdialog
-syn keyword     sqfCommand      creatediarylink creatediaryrecord
-syn keyword     sqfCommand      creatediarysubject createdisplay
-syn keyword     sqfCommand      creategeardialog creategroup
+syn keyword     sqfCommand      canfire canmove canslingload canstand
+syn keyword     sqfCommand      canunloadincombat captive captivenum cbchecked
+syn keyword     sqfCommand      cbsetchecked ceil cheatsenabled checkaifeature
+syn keyword     sqfCommand      classname clearallitemsfrombackpack
+syn keyword     sqfCommand      clearbackpackcargo clearbackpackcargoglobal
+syn keyword     sqfCommand      clearforcesrtd cleargroupicons clearitemcargo
+syn keyword     sqfCommand      clearitemcargoglobal clearitempool
+syn keyword     sqfCommand      clearmagazinecargo clearmagazinecargoglobal
+syn keyword     sqfCommand      clearmagazinepool clearoverlay clearradio
+syn keyword     sqfCommand      clearweaponcargo clearweaponcargoglobal
+syn keyword     sqfCommand      clearweaponpool closedialog closedisplay
+syn keyword     sqfCommand      closeoverlay collapseobjecttree collectivertd
+syn keyword     sqfCommand      combatmode commandartilleryfire commandchat
+syn keyword     sqfCommand      commander commandfire commandfollow
+syn keyword     sqfCommand      commandgetout commandingmenu commandmove
+syn keyword     sqfCommand      commandradio commandstop commandtarget
+syn keyword     sqfCommand      commandwatch comment commitoverlay
+syn keyword     sqfCommand      completedfsm composetext configclasses
+syn keyword     sqfCommand      configfile configname connectterminaltouav
+syn keyword     sqfCommand      copyfromclipboard copytoclipboard
+syn keyword     sqfCommand      copywaypoints cos countenemy countfriendly
+syn keyword     sqfCommand      countside counttype countunknown createagent
+syn keyword     sqfCommand      createcenter createdialog creatediarylink
+syn keyword     sqfCommand      creatediaryrecord creatediarysubject
+syn keyword     sqfCommand      createdisplay creategeardialog creategroup
 syn keyword     sqfCommand      createguardedpoint createlocation createmarker
 syn keyword     sqfCommand      createmarkerlocal createmenu createmine
 syn keyword     sqfCommand      createmissiondisplay createsimpletask
@@ -173,13 +175,13 @@ syn keyword     sqfCommand      deletevehiclecrew deletewaypoint detach
 syn keyword     sqfCommand      detectedmines diag_fps diag_fpsmin
 syn keyword     sqfCommand      diag_frameno diag_log diag_ticktime dialog
 syn keyword     sqfCommand      diarysubjectexists difficulty
-syn keyword     sqfCommand      difficultyenabled direction directsay
-syn keyword     sqfCommand      disableai disablecollisionwith
-syn keyword     sqfCommand      disableconversation disabledebriefingstats
-syn keyword     sqfCommand      disableserialization disabletiequipment
-syn keyword     sqfCommand      disableuavconnectability disableuserinput
-syn keyword     sqfCommand      displayaddeventhandler displayctrl
-syn keyword     sqfCommand      displayremovealleventhandlers
+syn keyword     sqfCommand      difficultyenabled difficultyenabledrtd
+syn keyword     sqfCommand      direction directsay disableai
+syn keyword     sqfCommand      disablecollisionwith disableconversation
+syn keyword     sqfCommand      disabledebriefingstats disableserialization
+syn keyword     sqfCommand      disabletiequipment disableuavconnectability
+syn keyword     sqfCommand      disableuserinput displayaddeventhandler
+syn keyword     sqfCommand      displayctrl displayremovealleventhandlers
 syn keyword     sqfCommand      displayremoveeventhandler
 syn keyword     sqfCommand      displayseteventhandler dissolveteam distance
 syn keyword     sqfCommand      distancesqr distributionregion doartilleryfire
@@ -189,38 +191,43 @@ syn keyword     sqfCommand      drawicon drawicon3d drawline drawline3d
 syn keyword     sqfCommand      drawlink drawlocation drawrectangle driver
 syn keyword     sqfCommand      drop echo editobject editorseteventhandler
 syn keyword     sqfCommand      effectivecommander emptypositions enableai
-syn keyword     sqfCommand      enableaifeature enableattack enablecamshake
-syn keyword     sqfCommand      enablecaustics enablecollisionwith
-syn keyword     sqfCommand      enablecopilot enabledebriefingstats
-syn keyword     sqfCommand      enablediaglegend enableenddialog
-syn keyword     sqfCommand      enableengineartillery enableenvironment
-syn keyword     sqfCommand      enablefatigue enablegunlights enableirlasers
-syn keyword     sqfCommand      enablemimics enableradio enablereload
-syn keyword     sqfCommand      enablesatnormalondetail enablesaving
-syn keyword     sqfCommand      enablesentences enablesimulation
-syn keyword     sqfCommand      enablesimulationglobal enableteamswitch
+syn keyword     sqfCommand      enableaifeature enableattack
+syn keyword     sqfCommand      enableautostartuprtd enableautotrimrtd
+syn keyword     sqfCommand      enablecamshake enablecaustics
+syn keyword     sqfCommand      enablecollisionwith enablecopilot
+syn keyword     sqfCommand      enabledebriefingstats enablediaglegend
+syn keyword     sqfCommand      enableenddialog enableengineartillery
+syn keyword     sqfCommand      enableenvironment enablefatigue
+syn keyword     sqfCommand      enablegunlights enableirlasers enablemimics
+syn keyword     sqfCommand      enablepersonturret enableradio enablereload
+syn keyword     sqfCommand      enableropeattach enablesatnormalondetail
+syn keyword     sqfCommand      enablesaving enablesentences enablesimulation
+syn keyword     sqfCommand      enablesimulationglobal enablestressdamage
+syn keyword     sqfCommand      enableteamswitch enabletraffic
 syn keyword     sqfCommand      enableuavconnectability endloadingscreen
-syn keyword     sqfCommand      endmission engineon entities
-syn keyword     sqfCommand      estimatedendservertime estimatedtimeleft
-syn keyword     sqfCommand      evalobjectargument everybackpack
-syn keyword     sqfCommand      everycontainer exec execeditorscript exit exp
-syn keyword     sqfCommand      expecteddestination eyedirection eyepos face
-syn keyword     sqfCommand      faction fademusic faderadio fadesound
-syn keyword     sqfCommand      fadespeech failmission fillweaponsfrompool
-syn keyword     sqfCommand      find findcover finddisplay findeditorobject
-syn keyword     sqfCommand      findemptyposition findemptypositionready
-syn keyword     sqfCommand      findnearestenemy finishmissioninit finite fire
-syn keyword     sqfCommand      fireattarget firstbackpack flag flagowner
-syn keyword     sqfCommand      fleeing floor flyinheight fog fogforecast
-syn keyword     sqfCommand      fogparams forceadduniform forceend forcemap
-syn keyword     sqfCommand      forcerespawn forcespeed forcewalk
-syn keyword     sqfCommand      forceweaponfire forceweatherchange
-syn keyword     sqfCommand      foreachmember foreachmemberagent
-syn keyword     sqfCommand      foreachmemberteam format formation
-syn keyword     sqfCommand      formationdirection formationleader
+syn keyword     sqfCommand      endmission engineon enginesisonrtd
+syn keyword     sqfCommand      enginespowerrtd enginesrpmrtd enginestorquertd
+syn keyword     sqfCommand      entities estimatedendservertime
+syn keyword     sqfCommand      estimatedtimeleft evalobjectargument
+syn keyword     sqfCommand      everybackpack everycontainer exec
+syn keyword     sqfCommand      execeditorscript exit exp expecteddestination
+syn keyword     sqfCommand      eyedirection eyepos face faction fademusic
+syn keyword     sqfCommand      faderadio fadesound fadespeech failmission
+syn keyword     sqfCommand      fillweaponsfrompool find findcover finddisplay
+syn keyword     sqfCommand      findeditorobject findemptyposition
+syn keyword     sqfCommand      findemptypositionready findnearestenemy
+syn keyword     sqfCommand      finishmissioninit finite fire fireattarget
+syn keyword     sqfCommand      firstbackpack flag flagowner fleeing floor
+syn keyword     sqfCommand      flyinheight fog fogforecast fogparams
+syn keyword     sqfCommand      forceadduniform forceatpositionrtd forceend
+syn keyword     sqfCommand      forcegeneratorrtd forcemap forcerespawn
+syn keyword     sqfCommand      forcespeed forcewalk forceweaponfire
+syn keyword     sqfCommand      forceweatherchange foreachmember
+syn keyword     sqfCommand      foreachmemberagent foreachmemberteam format
+syn keyword     sqfCommand      formation formationdirection formationleader
 syn keyword     sqfCommand      formationmembers formationposition
 syn keyword     sqfCommand      formationtask formattext formleader freelook
-syn keyword     sqfCommand      fromeditor fuel gearidcammocount
+syn keyword     sqfCommand      fromeditor fuel fullcrew gearidcammocount
 syn keyword     sqfCommand      gearslotammocount gearslotdata getammocargo
 syn keyword     sqfCommand      getarray getartilleryammo
 syn keyword     sqfCommand      getartillerycomputersettings getartilleryeta
@@ -232,8 +239,8 @@ syn keyword     sqfCommand      getdescription getdir getdirvisual
 syn keyword     sqfCommand      getdlcassetsusage getdlcassetsusagebyname
 syn keyword     sqfCommand      getdlcs getdlcusagetime geteditorcamera
 syn keyword     sqfCommand      geteditormode geteditorobjectscope
-syn keyword     sqfCommand      getelevationoffset getfatigue
-syn keyword     sqfCommand      getfieldmanualstartpage getfriend
+syn keyword     sqfCommand      getelevationoffset getenginetargetrpmrtd
+syn keyword     sqfCommand      getfatigue getfieldmanualstartpage getfriend
 syn keyword     sqfCommand      getfsmvariable getfuelcargo getgroupicon
 syn keyword     sqfCommand      getgroupiconparams getgroupicons gethidefrom
 syn keyword     sqfCommand      gethit gethitpointdamage getitemcargo
@@ -244,15 +251,17 @@ syn keyword     sqfCommand      getobjectchildren getobjectdlcs getobjectproxy
 syn keyword     sqfCommand      getoxygenremaining getplayeruid getpos
 syn keyword     sqfCommand      getposasl getposaslvisual getposaslw getposatl
 syn keyword     sqfCommand      getposatlvisual getposvisual getposworld
-syn keyword     sqfCommand      getrepaircargo getresolution getshadowdistance
-syn keyword     sqfCommand      getspeed getstatvalue getterrainheightasl
-syn keyword     sqfCommand      gettext gettotaldlcusagetime getvariable
-syn keyword     sqfCommand      getweaponcargo getwppos glanceat globalchat
-syn keyword     sqfCommand      globalradio goggles goto group groupchat
-syn keyword     sqfCommand      groupfromnetid groupiconselectable
-syn keyword     sqfCommand      groupiconsvisible groupid groupradio
-syn keyword     sqfCommand      groupselectedunits groupselectunit gunner
-syn keyword     sqfCommand      gusts halt handgunitems handgunmagazine
+syn keyword     sqfCommand      getrepaircargo getresolution getrotorbrakertd
+syn keyword     sqfCommand      getshadowdistance getslingload getspeed
+syn keyword     sqfCommand      getstatvalue getterrainheightasl gettext
+syn keyword     sqfCommand      gettotaldlcusagetime gettrimoffsetrtd
+syn keyword     sqfCommand      getvariable getweaponcargo
+syn keyword     sqfCommand      getwingsorientationrtd getwingspositionrtd
+syn keyword     sqfCommand      getwppos glanceat globalchat globalradio
+syn keyword     sqfCommand      goggles goto group groupchat groupfromnetid
+syn keyword     sqfCommand      groupiconselectable groupiconsvisible groupid
+syn keyword     sqfCommand      groupradio groupselectedunits groupselectunit
+syn keyword     sqfCommand      gunner gusts halt handgunitems handgunmagazine
 syn keyword     sqfCommand      handgunweapon handshit hasinterface hasweapon
 syn keyword     sqfCommand      hcallgroups hcgroupparams hcleader
 syn keyword     sqfCommand      hcremoveallgroups hcremovegroup hcselected
@@ -266,7 +275,8 @@ syn keyword     sqfCommand      inflamed ingameuiseteventhandler inheritsfrom
 syn keyword     sqfCommand      initambientlife inputaction inrangeofartillery
 syn keyword     sqfCommand      inserteditorobject intersect isabletobreathe
 syn keyword     sqfCommand      isagent isarray isautohoveron isautonomous
-syn keyword     sqfCommand      isautotest isbleeding isburning isclass
+syn keyword     sqfCommand      isautostartupenabledrtd isautotest
+syn keyword     sqfCommand      isautotrimonrtd isbleeding isburning isclass
 syn keyword     sqfCommand      iscollisionlighton iscopilotenabled
 syn keyword     sqfCommand      isdedicated isdlcavailable isengineon
 syn keyword     sqfCommand      isequalto isflashlighton isflatempty
@@ -274,22 +284,23 @@ syn keyword     sqfCommand      isforcedwalk isformationleader ishidden
 syn keyword     sqfCommand      isinremainscollector isinstructorfigureenabled
 syn keyword     sqfCommand      isirlaseron iskeyactive iskindof islighton
 syn keyword     sqfCommand      islocalized ismanualfire ismarkedforcollection
-syn keyword     sqfCommand      ismultiplayer isnil isnull isnumber isonroad
-syn keyword     sqfCommand      ispipenabled isplayer isrealtime isserver
-syn keyword     sqfCommand      isshowing3dicons issteammission
-syn keyword     sqfCommand      isstreamfriendlyuienabled istext
-syn keyword     sqfCommand      istouchingground istuthintsenabled
-syn keyword     sqfCommand      isuavconnectable isuavconnected
-syn keyword     sqfCommand      isuniformallowed iswalking itemcargo items
-syn keyword     sqfCommand      itemswithmagazines join joinas joinassilent
-syn keyword     sqfCommand      joinsilent kbadddatabase kbadddatabasetargets
-syn keyword     sqfCommand      kbaddtopic kbhastopic kbreact kbremovetopic
-syn keyword     sqfCommand      kbtell kbwassaid keyimage keyname knowsabout
-syn keyword     sqfCommand      land landat landresult language lasertarget
-syn keyword     sqfCommand      lbadd lbclear lbcolor lbcursel lbdata lbdelete
-syn keyword     sqfCommand      lbisselected lbpicture lbselection lbsetcolor
-syn keyword     sqfCommand      lbsetcursel lbsetdata lbsetpicture
-syn keyword     sqfCommand      lbsetpicturecolor lbsetpicturecolordisabled
+syn keyword     sqfCommand      ismultiplayer isnil isnull isnumber
+syn keyword     sqfCommand      isobjectrtd isonroad ispipenabled isplayer
+syn keyword     sqfCommand      isrealtime isserver isshowing3dicons
+syn keyword     sqfCommand      issteammission isstreamfriendlyuienabled
+syn keyword     sqfCommand      isstressdamageenabled istext istouchingground
+syn keyword     sqfCommand      istuthintsenabled isuavconnectable
+syn keyword     sqfCommand      isuavconnected isuniformallowed iswalking
+syn keyword     sqfCommand      itemcargo items itemswithmagazines join joinas
+syn keyword     sqfCommand      joinassilent joinsilent kbadddatabase
+syn keyword     sqfCommand      kbadddatabasetargets kbaddtopic kbhastopic
+syn keyword     sqfCommand      kbreact kbremovetopic kbtell kbwassaid
+syn keyword     sqfCommand      keyimage keyname knowsabout land landat
+syn keyword     sqfCommand      landresult language lasertarget lbadd lbclear
+syn keyword     sqfCommand      lbcolor lbcursel lbdata lbdelete lbisselected
+syn keyword     sqfCommand      lbpicture lbselection lbsetcolor lbsetcursel
+syn keyword     sqfCommand      lbsetdata lbsetpicture lbsetpicturecolor
+syn keyword     sqfCommand      lbsetpicturecolordisabled
 syn keyword     sqfCommand      lbsetpicturecolorselected lbsetselected
 syn keyword     sqfCommand      lbsettooltip lbsetvalue lbsize lbsort
 syn keyword     sqfCommand      lbsortbyvalue lbtext lbvalue leader
@@ -315,28 +326,29 @@ syn keyword     sqfCommand      lookatpos magazinecargo magazines
 syn keyword     sqfCommand      magazinesammo magazinesammocargo
 syn keyword     sqfCommand      magazinesammofull magazinesdetail
 syn keyword     sqfCommand      magazinesdetailbackpack magazinesdetailuniform
-syn keyword     sqfCommand      magazinesdetailvest magazinesturret mapanimadd
-syn keyword     sqfCommand      mapanimclear mapanimcommit mapanimdone
-syn keyword     sqfCommand      mapcenteroncamera mapgridposition
-syn keyword     sqfCommand      markasfinishedonsteam markeralpha markerbrush
-syn keyword     sqfCommand      markercolor markerdir markerpos markershape
-syn keyword     sqfCommand      markersize markertext markertype max members
-syn keyword     sqfCommand      min mineactive minedetectedby
-syn keyword     sqfCommand      missionconfigfile missiondifficulty
-syn keyword     sqfCommand      missionname missionnamespace missionstart mod
-syn keyword     sqfCommand      modeltoworld modeltoworldvisual moonintensity
-syn keyword     sqfCommand      morale move moveinany moveincargo
-syn keyword     sqfCommand      moveincommander moveindriver moveingunner
-syn keyword     sqfCommand      moveinturret moveobjecttoend moveout movetime
-syn keyword     sqfCommand      moveto movetocompleted movetofailed
-syn keyword     sqfCommand      musicvolume name namesound nearentities
-syn keyword     sqfCommand      nearestbuilding nearestlocation
-syn keyword     sqfCommand      nearestlocations nearestlocationwithdubbing
-syn keyword     sqfCommand      nearestobject nearestobjects nearobjects
-syn keyword     sqfCommand      nearobjectsready nearroads nearsupplies
-syn keyword     sqfCommand      neartargets needreload netid newoverlay
-syn keyword     sqfCommand      nextmenuitemindex nextweatherchange nmenuitems
-syn keyword     sqfCommand      not numbertodate objectcurators
+syn keyword     sqfCommand      magazinesdetailvest magazinesturret
+syn keyword     sqfCommand      magazineturretammo mapanimadd mapanimclear
+syn keyword     sqfCommand      mapanimcommit mapanimdone mapcenteroncamera
+syn keyword     sqfCommand      mapgridposition markasfinishedonsteam
+syn keyword     sqfCommand      markeralpha markerbrush markercolor markerdir
+syn keyword     sqfCommand      markerpos markershape markersize markertext
+syn keyword     sqfCommand      markertype max members min mineactive
+syn keyword     sqfCommand      minedetectedby missionconfigfile
+syn keyword     sqfCommand      missiondifficulty missionname missionnamespace
+syn keyword     sqfCommand      missionstart mod modeltoworld
+syn keyword     sqfCommand      modeltoworldvisual moonintensity morale move
+syn keyword     sqfCommand      moveinany moveincargo moveincommander
+syn keyword     sqfCommand      moveindriver moveingunner moveinturret
+syn keyword     sqfCommand      moveobjecttoend moveout movetime moveto
+syn keyword     sqfCommand      movetocompleted movetofailed musicvolume name
+syn keyword     sqfCommand      namesound nearentities nearestbuilding
+syn keyword     sqfCommand      nearestlocation nearestlocations
+syn keyword     sqfCommand      nearestlocationwithdubbing nearestobject
+syn keyword     sqfCommand      nearestobjects nearobjects nearobjectsready
+syn keyword     sqfCommand      nearroads nearsupplies neartargets needreload
+syn keyword     sqfCommand      netid newoverlay nextmenuitemindex
+syn keyword     sqfCommand      nextweatherchange nmenuitems not
+syn keyword     sqfCommand      numberofenginesrtd numbertodate objectcurators
 syn keyword     sqfCommand      objectfromnetid objstatus onbriefinggroup
 syn keyword     sqfCommand      onbriefingnotes onbriefingplan
 syn keyword     sqfCommand      onbriefingteamswitch oncommandmodechanged
@@ -409,42 +421,49 @@ syn keyword     sqfCommand      requiredversion resetcamshake
 syn keyword     sqfCommand      resetsubgroupdirection resize resources
 syn keyword     sqfCommand      respawnvehicle restarteditorcamera reveal
 syn keyword     sqfCommand      revealmine reverse reversedmousey
-syn keyword     sqfCommand      roadsconnectedto round runinitscript safezoneh
-syn keyword     sqfCommand      safezonew safezonewabs safezonex safezonexabs
-syn keyword     sqfCommand      safezoney savegame saveidentity savejoysticks
-syn keyword     sqfCommand      saveoverlay saveprofilenamespace savestatus
-syn keyword     sqfCommand      savevar savingenabled say say2d say3d
-syn keyword     sqfCommand      scopename score scoreside screentoworld
-syn keyword     sqfCommand      scriptname scudstate secondaryweapon
-syn keyword     sqfCommand      secondaryweaponitems secondaryweaponmagazine
-syn keyword     sqfCommand      select selectbestplaces selectdiarysubject
+syn keyword     sqfCommand      roadsconnectedto ropeattachedobjects
+syn keyword     sqfCommand      ropeattachedto ropeattachenabled ropeattachto
+syn keyword     sqfCommand      ropecreate ropecut ropedestroy ropedetach
+syn keyword     sqfCommand      ropeendposition ropelength ropes ropeunwind
+syn keyword     sqfCommand      ropeunwound rotorsforcesrtd rotorsrpmrtd round
+syn keyword     sqfCommand      runinitscript safezoneh safezonew safezonewabs
+syn keyword     sqfCommand      safezonex safezonexabs safezoney savegame
+syn keyword     sqfCommand      saveidentity savejoysticks saveoverlay
+syn keyword     sqfCommand      saveprofilenamespace savestatus savevar
+syn keyword     sqfCommand      savingenabled say say2d say3d scopename score
+syn keyword     sqfCommand      scoreside screentoworld scriptname scudstate
+syn keyword     sqfCommand      secondaryweapon secondaryweaponitems
+syn keyword     sqfCommand      secondaryweaponmagazine select
+syn keyword     sqfCommand      selectbestplaces selectdiarysubject
 syn keyword     sqfCommand      selectededitorobjects selecteditorobject
 syn keyword     sqfCommand      selectionposition selectleader selectnoplayer
 syn keyword     sqfCommand      selectplayer selectweapon selectweaponturret
 syn keyword     sqfCommand      sendaumessage sendsimplecommand sendtask
 syn keyword     sqfCommand      sendtaskresult sendudpmessage servercommand
-syn keyword     sqfCommand      servercommandavailable servertime set
-syn keyword     sqfCommand      setacctime setairportside setammo setammocargo
-syn keyword     sqfCommand      setaperture setaperturenew setarmorypoints
-syn keyword     sqfCommand      setattributes setautonomous setbehaviour
-syn keyword     sqfCommand      setbleedingremaining setcamerainterest
-syn keyword     sqfCommand      setcamshakedefparams setcamshakeparams
-syn keyword     sqfCommand      setcamuseti setcaptive setcenterofmass
-syn keyword     sqfCommand      setcollisionlight setcombatmode
-syn keyword     sqfCommand      setcompassoscillation
+syn keyword     sqfCommand      servercommandavailable servercommandexecutable
+syn keyword     sqfCommand      servertime set setacctime
+syn keyword     sqfCommand      setactualcollectivertd setairportside setammo
+syn keyword     sqfCommand      setammocargo setaperture setaperturenew
+syn keyword     sqfCommand      setarmorypoints setattributes setautonomous
+syn keyword     sqfCommand      setbehaviour setbleedingremaining setbrakesrtd
+syn keyword     sqfCommand      setcamerainterest setcamshakedefparams
+syn keyword     sqfCommand      setcamshakeparams setcamuseti setcaptive
+syn keyword     sqfCommand      setcenterofmass setcollisionlight
+syn keyword     sqfCommand      setcombatmode setcompassoscillation
 syn keyword     sqfCommand      setcuratorcameraareaceiling setcuratorcoef
 syn keyword     sqfCommand      setcuratoreditingareatype
 syn keyword     sqfCommand      setcuratorwaypointcost setcurrenttask
-syn keyword     sqfCommand      setcurrentwaypoint setdamage setdammage
-syn keyword     sqfCommand      setdate setdebriefingtext setdefaultcamera
-syn keyword     sqfCommand      setdestination setdetailmapblendpars setdir
-syn keyword     sqfCommand      setdirection setdrawicon setdropinterval
-syn keyword     sqfCommand      seteditormode seteditorobjectscope
-syn keyword     sqfCommand      seteffectcondition setface setfaceanimation
+syn keyword     sqfCommand      setcurrentwaypoint setcustomweightrtd
+syn keyword     sqfCommand      setdamage setdammage setdate setdebriefingtext
+syn keyword     sqfCommand      setdefaultcamera setdestination
+syn keyword     sqfCommand      setdetailmapblendpars setdir setdirection
+syn keyword     sqfCommand      setdrawicon setdropinterval seteditormode
+syn keyword     sqfCommand      seteditorobjectscope seteffectcondition
+syn keyword     sqfCommand      setenginerpmrtd setface setfaceanimation
 syn keyword     sqfCommand      setfatigue setflagowner setflagside
-syn keyword     sqfCommand      setflagtexture setfog setformation
-syn keyword     sqfCommand      setformationtask setformdir setfriend
-syn keyword     sqfCommand      setfromeditor setfsmvariable setfuel
+syn keyword     sqfCommand      setflagtexture setfog setforcegeneratorrtd
+syn keyword     sqfCommand      setformation setformationtask setformdir
+syn keyword     sqfCommand      setfriend setfromeditor setfsmvariable setfuel
 syn keyword     sqfCommand      setfuelcargo setgroupicon setgroupiconparams
 syn keyword     sqfCommand      setgroupiconsselectable setgroupiconsvisible
 syn keyword     sqfCommand      setgroupid setgusts sethidebehind sethit
@@ -455,11 +474,11 @@ syn keyword     sqfCommand      setlightbrightness setlightcolor
 syn keyword     sqfCommand      setlightdaylight setlightflaremaxdistance
 syn keyword     sqfCommand      setlightflaresize setlightintensity
 syn keyword     sqfCommand      setlightnings setlightuseflare
-syn keyword     sqfCommand      setlocalwindparams setmarkeralpha
-syn keyword     sqfCommand      setmarkeralphalocal setmarkerbrush
-syn keyword     sqfCommand      setmarkerbrushlocal setmarkercolor
-syn keyword     sqfCommand      setmarkercolorlocal setmarkerdir
-syn keyword     sqfCommand      setmarkerdirlocal setmarkerpos
+syn keyword     sqfCommand      setlocalwindparams setmagazineturretammo
+syn keyword     sqfCommand      setmarkeralpha setmarkeralphalocal
+syn keyword     sqfCommand      setmarkerbrush setmarkerbrushlocal
+syn keyword     sqfCommand      setmarkercolor setmarkercolorlocal
+syn keyword     sqfCommand      setmarkerdir setmarkerdirlocal setmarkerpos
 syn keyword     sqfCommand      setmarkerposlocal setmarkershape
 syn keyword     sqfCommand      setmarkershapelocal setmarkersize
 syn keyword     sqfCommand      setmarkersizelocal setmarkertext
@@ -478,29 +497,33 @@ syn keyword     sqfCommand      setpitch setplayable setplayerrespawntime
 syn keyword     sqfCommand      setpos setposasl setposasl2 setposaslw
 syn keyword     sqfCommand      setposatl setposition setposworld setradiomsg
 syn keyword     sqfCommand      setrain setrainbow setrandomlip setrank
-syn keyword     sqfCommand      setrectangular setrepaircargo
+syn keyword     sqfCommand      setrectangular setrepaircargo setrotorbrakertd
 syn keyword     sqfCommand      setshadowdistance setside
 syn keyword     sqfCommand      setsimpletaskdescription
 syn keyword     sqfCommand      setsimpletaskdestination setsimpletasktarget
 syn keyword     sqfCommand      setsimulweatherlayers setsize setskill
-syn keyword     sqfCommand      setsoundeffect setspeaker setspeech
-syn keyword     sqfCommand      setspeedmode setstatvalue setsystemofunits
-syn keyword     sqfCommand      settargetage settaskresult settaskstate
-syn keyword     sqfCommand      setterraingrid settext settimemultiplier
-syn keyword     sqfCommand      settitleeffect settriggeractivation
-syn keyword     sqfCommand      settriggerarea settriggerstatements
-syn keyword     sqfCommand      settriggertext settriggertimeout
-syn keyword     sqfCommand      settriggertype settype setunconscious
-syn keyword     sqfCommand      setunitability setunitpos setunitposweak
-syn keyword     sqfCommand      setunitrank setunitrecoilcoefficient
-syn keyword     sqfCommand      setuseractiontext setvariable setvectordir
-syn keyword     sqfCommand      setvectordirandup setvectorup setvehicleammo
-syn keyword     sqfCommand      setvehicleammodef setvehiclearmor setvehicleid
-syn keyword     sqfCommand      setvehiclelock setvehicleposition
-syn keyword     sqfCommand      setvehicletipars setvehiclevarname setvelocity
+syn keyword     sqfCommand      setslingload setsoundeffect setspeaker
+syn keyword     sqfCommand      setspeech setspeedmode setstatvalue
+syn keyword     sqfCommand      setsystemofunits settargetage settaskresult
+syn keyword     sqfCommand      settaskstate setterraingrid settext
+syn keyword     sqfCommand      settimemultiplier settitleeffect
+syn keyword     sqfCommand      settrafficdensity settrafficdistance
+syn keyword     sqfCommand      settrafficgap settrafficspeed
+syn keyword     sqfCommand      settriggeractivation settriggerarea
+syn keyword     sqfCommand      settriggerstatements settriggertext
+syn keyword     sqfCommand      settriggertimeout settriggertype settype
+syn keyword     sqfCommand      setunconscious setunitability setunitpos
+syn keyword     sqfCommand      setunitposweak setunitrank
+syn keyword     sqfCommand      setunitrecoilcoefficient setuseractiontext
+syn keyword     sqfCommand      setvariable setvectordir setvectordirandup
+syn keyword     sqfCommand      setvectorup setvehicleammo setvehicleammodef
+syn keyword     sqfCommand      setvehiclearmor setvehicleid setvehiclelock
+syn keyword     sqfCommand      setvehicleposition setvehicletipars
+syn keyword     sqfCommand      setvehiclevarname setvelocity
 syn keyword     sqfCommand      setvelocitytransformation setviewdistance
-syn keyword     sqfCommand      setvisibleiftreecollapsed setwaves
-syn keyword     sqfCommand      setwaypointbehaviour setwaypointcombatmode
+syn keyword     sqfCommand      setvisibleiftreecollapsed setwantedrpmrtd
+syn keyword     sqfCommand      setwaves setwaypointbehaviour
+syn keyword     sqfCommand      setwaypointcombatmode
 syn keyword     sqfCommand      setwaypointcompletionradius
 syn keyword     sqfCommand      setwaypointdescription setwaypointformation
 syn keyword     sqfCommand      setwaypointhouseposition
@@ -510,45 +533,48 @@ syn keyword     sqfCommand      setwaypointscript setwaypointspeed
 syn keyword     sqfCommand      setwaypointstatements setwaypointtimeout
 syn keyword     sqfCommand      setwaypointtype setwaypointvisible
 syn keyword     sqfCommand      setweaponreloadingtime setwind setwinddir
-syn keyword     sqfCommand      setwindforce setwindstr setwppos show3dicons
-syn keyword     sqfCommand      showchat showcinemaborder showcommandingmenu
-syn keyword     sqfCommand      showcompass showcuratorcompass showgps showhud
-syn keyword     sqfCommand      showlegend showmap shownartillerycomputer
-syn keyword     sqfCommand      showncompass showncuratorcompass
-syn keyword     sqfCommand      showneweditorobject showngps shownmap shownpad
-syn keyword     sqfCommand      shownradio shownuavfeed shownwarrant
-syn keyword     sqfCommand      shownwatch showpad showradio showsubtitles
-syn keyword     sqfCommand      showuavfeed showwarrant showwatch showwaypoint
-syn keyword     sqfCommand      side sidechat sideenemy sidefriendly sidelogic
+syn keyword     sqfCommand      setwindforce setwindstr setwingforcescalertd
+syn keyword     sqfCommand      setwppos show3dicons showchat showcinemaborder
+syn keyword     sqfCommand      showcommandingmenu showcompass
+syn keyword     sqfCommand      showcuratorcompass showgps showhud showlegend
+syn keyword     sqfCommand      showmap shownartillerycomputer showncompass
+syn keyword     sqfCommand      showncuratorcompass showneweditorobject
+syn keyword     sqfCommand      showngps shownmap shownpad shownradio
+syn keyword     sqfCommand      shownuavfeed shownwarrant shownwatch showpad
+syn keyword     sqfCommand      showradio showsubtitles showuavfeed
+syn keyword     sqfCommand      showwarrant showwatch showwaypoint side
+syn keyword     sqfCommand      sidechat sideenemy sidefriendly sidelogic
 syn keyword     sqfCommand      sideradio simpletasks simulationenabled
 syn keyword     sqfCommand      simulclouddensity simulcloudocclusion
 syn keyword     sqfCommand      simulinclouds simulweathersync sin size sizeof
 syn keyword     sqfCommand      skill skillfinal skiptime sliderposition
 syn keyword     sqfCommand      sliderrange slidersetposition slidersetrange
-syn keyword     sqfCommand      slidersetspeed sliderspeed soldiermagazines
+syn keyword     sqfCommand      slidersetspeed sliderspeed
+syn keyword     sqfCommand      slingloadassistantshown soldiermagazines
 syn keyword     sqfCommand      someammo soundvolume speaker speed speedmode
 syn keyword     sqfCommand      sqrt squadparams stance startloadingscreen
-syn keyword     sqfCommand      step stop stopped str sunormoon supportinfo
-syn keyword     sqfCommand      suppressfor surfaceiswater surfacenormal
-syn keyword     sqfCommand      surfacetype swimindepth switchableunits
-syn keyword     sqfCommand      switchaction switchcamera switchgesture
-syn keyword     sqfCommand      switchlight switchmove synchronizedobjects
-syn keyword     sqfCommand      synchronizedtriggers synchronizedwaypoints
-syn keyword     sqfCommand      synchronizeobjectsadd synchronizeobjectsremove
-syn keyword     sqfCommand      synchronizetrigger synchronizewaypoint
-syn keyword     sqfCommand      systemchat systemofunits tan targetsaggregate
-syn keyword     sqfCommand      targetsquery taskchildren taskcompleted
-syn keyword     sqfCommand      taskdescription taskdestination taskhint
-syn keyword     sqfCommand      taskparent taskresult taskstate teammember
-syn keyword     sqfCommand      teamname teams teamswitch teamswitchenabled
-syn keyword     sqfCommand      teamtype terrainintersect terrainintersectasl
-syn keyword     sqfCommand      text textlog textlogformat tg time
-syn keyword     sqfCommand      timemultiplier titlecut titlefadeout titleobj
-syn keyword     sqfCommand      titlersc titletext toarray tolower tostring
-syn keyword     sqfCommand      toupper triggeractivated triggeractivation
-syn keyword     sqfCommand      triggerarea triggerattachedvehicle
-syn keyword     sqfCommand      triggerattachobject triggerattachvehicle
-syn keyword     sqfCommand      triggerstatements triggertext triggertimeout
+syn keyword     sqfCommand      step stop stopenginertd stopped str sunormoon
+syn keyword     sqfCommand      supportinfo suppressfor surfaceiswater
+syn keyword     sqfCommand      surfacenormal surfacetype swimindepth
+syn keyword     sqfCommand      switchableunits switchaction switchcamera
+syn keyword     sqfCommand      switchgesture switchlight switchmove
+syn keyword     sqfCommand      synchronizedobjects synchronizedtriggers
+syn keyword     sqfCommand      synchronizedwaypoints synchronizeobjectsadd
+syn keyword     sqfCommand      synchronizeobjectsremove synchronizetrigger
+syn keyword     sqfCommand      synchronizewaypoint systemchat systemofunits
+syn keyword     sqfCommand      tan targetsaggregate targetsquery taskchildren
+syn keyword     sqfCommand      taskcompleted taskdescription taskdestination
+syn keyword     sqfCommand      taskhint taskparent taskresult taskstate
+syn keyword     sqfCommand      teammember teamname teams teamswitch
+syn keyword     sqfCommand      teamswitchenabled teamtype terrainintersect
+syn keyword     sqfCommand      terrainintersectasl text textlog textlogformat
+syn keyword     sqfCommand      tg time timemultiplier titlecut titlefadeout
+syn keyword     sqfCommand      titleobj titlersc titletext toarray tolower
+syn keyword     sqfCommand      tostring toupper triggeractivated
+syn keyword     sqfCommand      triggeractivation triggerarea
+syn keyword     sqfCommand      triggerattachedvehicle triggerattachobject
+syn keyword     sqfCommand      triggerattachvehicle triggerstatements
+syn keyword     sqfCommand      triggertext triggertimeout
 syn keyword     sqfCommand      triggertimeoutcurrent triggertype turretlocal
 syn keyword     sqfCommand      turretunit tvadd tvclear tvcollapse tvcount
 syn keyword     sqfCommand      tvcursel tvdata tvdelete tvexpand tvpicture
@@ -589,9 +615,10 @@ syn keyword     sqfCommand      waypointtimeoutcurrent waypointtype
 syn keyword     sqfCommand      waypointvisible weaponaccessories weaponcargo
 syn keyword     sqfCommand      weapondirection weaponinertia weaponlowered
 syn keyword     sqfCommand      weapons weaponsitems weaponsitemscargo
-syn keyword     sqfCommand      weaponstate weaponsturret wfsidetext wind
-syn keyword     sqfCommand      winddir windstr worldname worldtomodel
-syn keyword     sqfCommand      worldtomodelvisual worldtoscreen
+syn keyword     sqfCommand      weaponstate weaponsturret weightrtd wfsidetext
+syn keyword     sqfCommand      wind winddir windrtd windstr wingsforcesrtd
+syn keyword     sqfCommand      worldname worldtomodel worldtomodelvisual
+syn keyword     sqfCommand      worldtoscreen
 
 " What is included as a statement and what is left as a function is a bit "
 " arbitrary. Mostly it's anything that involves the CODE type or has anything to
