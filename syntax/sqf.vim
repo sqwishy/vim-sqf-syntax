@@ -693,7 +693,7 @@ syn region      sqfCommentL     start="//" skip="\\$" end="$" keepend
 syn region      sqfIncluded     display contained start=+"+ skip=+\\\\\|\\"+ end=+"+
 syn match       sqfIncluded     display contained "<[^>]*>"
 syn match       sqfInclude      display "^\s*\(%:\|#\)\s*include\>\s*["<]" contains=sqfIncluded
-syn region      sqfPreProc      start="^\s*\(%:\|#\)\s*\(ifdef\|else\|endif\)" skip="\\$" end="$" keepend
+syn region      sqfPreProc      start="^\s*\(%:\|#\)\s*\(ifn\?def\|else\|endif\)" skip="\\$" end="$" keepend
 syn region      sqfDefine       start="^\s*\(%:\|#\)\s*\(define\|undef\)\>" skip="\\$" end="$" keepend
 syn match       sqfNumber       display "\d\+\(u\=l\{0,2}\|ll\=u\)\>"
 
