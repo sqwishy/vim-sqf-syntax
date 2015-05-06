@@ -2,7 +2,7 @@
 " Language:        SQF Script (used in Bohemia Interactives ArmA/ArmA2/etc.)
 " Original Author: shreds-of-sanity@gmx.net
 " Modified By:     somebody@froghat.ca
-" Last modified for Arma 3 version 1.42
+" Last modified for Arma 3 version 1.44
 
 if exists("b:current_syntax")
   finish
@@ -180,16 +180,18 @@ syn keyword     sqfCommand      deletelocation deletemarker deletemarkerlocal
 syn keyword     sqfCommand      deleterange deleteresources deletesite
 syn keyword     sqfCommand      deletestatus deleteteam deletevehicle
 syn keyword     sqfCommand      deletevehiclecrew deletewaypoint detach
-syn keyword     sqfCommand      detectedmines diag_fps diag_fpsmin
-syn keyword     sqfCommand      diag_frameno diag_log diag_ticktime dialog
-syn keyword     sqfCommand      diarysubjectexists difficulty
-syn keyword     sqfCommand      difficultyenabled difficultyenabledrtd
-syn keyword     sqfCommand      direction directsay disableai
-syn keyword     sqfCommand      disablecollisionwith disableconversation
-syn keyword     sqfCommand      disabledebriefingstats disableserialization
-syn keyword     sqfCommand      disabletiequipment disableuavconnectability
-syn keyword     sqfCommand      disableuserinput displayaddeventhandler
-syn keyword     sqfCommand      displayctrl displayremovealleventhandlers
+syn keyword     sqfCommand      detectedmines diag_activemissionfsms
+syn keyword     sqfCommand      diag_activesqfscripts diag_activesqsscripts
+syn keyword     sqfCommand      diag_fps diag_fpsmin diag_frameno diag_log
+syn keyword     sqfCommand      diag_ticktime dialog diarysubjectexists
+syn keyword     sqfCommand      difficulty difficultyenabled
+syn keyword     sqfCommand      difficultyenabledrtd direction directsay
+syn keyword     sqfCommand      disableai disablecollisionwith
+syn keyword     sqfCommand      disableconversation disabledebriefingstats
+syn keyword     sqfCommand      disableserialization disabletiequipment
+syn keyword     sqfCommand      disableuavconnectability disableuserinput
+syn keyword     sqfCommand      displayaddeventhandler displayctrl
+syn keyword     sqfCommand      displayremovealleventhandlers
 syn keyword     sqfCommand      displayremoveeventhandler
 syn keyword     sqfCommand      displayseteventhandler dissolveteam distance
 syn keyword     sqfCommand      distancesqr distributionregion doartilleryfire
@@ -588,30 +590,30 @@ syn keyword     sqfCommand      skill skillfinal skiptime sliderposition
 syn keyword     sqfCommand      sliderrange slidersetposition slidersetrange
 syn keyword     sqfCommand      slidersetspeed sliderspeed
 syn keyword     sqfCommand      slingloadassistantshown soldiermagazines
-syn keyword     sqfCommand      someammo soundvolume speaker speed speedmode
-syn keyword     sqfCommand      sqrt squadparams stance startloadingscreen
-syn keyword     sqfCommand      step stop stopenginertd stopped str sunormoon
-syn keyword     sqfCommand      supportinfo suppressfor surfaceiswater
-syn keyword     sqfCommand      surfacenormal surfacetype swimindepth
-syn keyword     sqfCommand      switchableunits switchaction switchcamera
-syn keyword     sqfCommand      switchgesture switchlight switchmove
-syn keyword     sqfCommand      synchronizedobjects synchronizedtriggers
-syn keyword     sqfCommand      synchronizedwaypoints synchronizeobjectsadd
-syn keyword     sqfCommand      synchronizeobjectsremove synchronizetrigger
-syn keyword     sqfCommand      synchronizewaypoint systemchat systemofunits
-syn keyword     sqfCommand      tan targetsaggregate targetsquery taskchildren
-syn keyword     sqfCommand      taskcompleted taskdescription taskdestination
-syn keyword     sqfCommand      taskhint taskparent taskresult taskstate
-syn keyword     sqfCommand      teammember teamname teams teamswitch
-syn keyword     sqfCommand      teamswitchenabled teamtype terrainintersect
-syn keyword     sqfCommand      terrainintersectasl text textlog textlogformat
-syn keyword     sqfCommand      tg time timemultiplier titlecut titlefadeout
-syn keyword     sqfCommand      titleobj titlersc titletext toarray tolower
-syn keyword     sqfCommand      tostring toupper triggeractivated
-syn keyword     sqfCommand      triggeractivation triggerarea
-syn keyword     sqfCommand      triggerattachedvehicle triggerattachobject
-syn keyword     sqfCommand      triggerattachvehicle triggerstatements
-syn keyword     sqfCommand      triggertext triggertimeout
+syn keyword     sqfCommand      someammo sort soundvolume speaker speed
+syn keyword     sqfCommand      speedmode sqrt squadparams stance
+syn keyword     sqfCommand      startloadingscreen step stop stopenginertd
+syn keyword     sqfCommand      stopped str sunormoon supportinfo suppressfor
+syn keyword     sqfCommand      surfaceiswater surfacenormal surfacetype
+syn keyword     sqfCommand      swimindepth switchableunits switchaction
+syn keyword     sqfCommand      switchcamera switchgesture switchlight
+syn keyword     sqfCommand      switchmove synchronizedobjects
+syn keyword     sqfCommand      synchronizedtriggers synchronizedwaypoints
+syn keyword     sqfCommand      synchronizeobjectsadd synchronizeobjectsremove
+syn keyword     sqfCommand      synchronizetrigger synchronizewaypoint
+syn keyword     sqfCommand      systemchat systemofunits tan targetsaggregate
+syn keyword     sqfCommand      targetsquery taskchildren taskcompleted
+syn keyword     sqfCommand      taskdescription taskdestination taskhint
+syn keyword     sqfCommand      taskparent taskresult taskstate teammember
+syn keyword     sqfCommand      teamname teams teamswitch teamswitchenabled
+syn keyword     sqfCommand      teamtype terrainintersect terrainintersectasl
+syn keyword     sqfCommand      text textlog textlogformat tg time
+syn keyword     sqfCommand      timemultiplier titlecut titlefadeout titleobj
+syn keyword     sqfCommand      titlersc titletext toarray tolower tostring
+syn keyword     sqfCommand      toupper triggeractivated triggeractivation
+syn keyword     sqfCommand      triggerarea triggerattachedvehicle
+syn keyword     sqfCommand      triggerattachobject triggerattachvehicle
+syn keyword     sqfCommand      triggerstatements triggertext triggertimeout
 syn keyword     sqfCommand      triggertimeoutcurrent triggertype turretlocal
 syn keyword     sqfCommand      turretowner turretunit tvadd tvclear
 syn keyword     sqfCommand      tvcollapse tvcount tvcursel tvdata tvdelete
