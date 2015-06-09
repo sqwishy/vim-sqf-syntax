@@ -2,7 +2,7 @@
 " Language:        SQF Script (used in Bohemia Interactives ArmA/ArmA2/etc.)
 " Original Author: shreds-of-sanity@gmx.net
 " Modified By:     somebody@froghat.ca
-" Last modified for Arma 3 version 1.44
+" Last modified for Arma 3 version 1.46
 
 if exists("b:current_syntax")
   finish
@@ -323,10 +323,11 @@ syn keyword     sqfCommand      lbsetpicturecolor lbsetpicturecolordisabled
 syn keyword     sqfCommand      lbsetpicturecolorselected lbsetpictureright
 syn keyword     sqfCommand      lbsetpicturerightcolor
 syn keyword     sqfCommand      lbsetpicturerightcolordisabled
-syn keyword     sqfCommand      lbsetpicturerightcolorselected lbsetselected
-syn keyword     sqfCommand      lbsettextright lbsettooltip lbsetvalue lbsize
-syn keyword     sqfCommand      lbsort lbsortbyvalue lbtext lbtextright
-syn keyword     sqfCommand      lbvalue leader leaderboarddeinit
+syn keyword     sqfCommand      lbsetpicturerightcolorselected
+syn keyword     sqfCommand      lbsetselectcolor lbsetselectcolorright
+syn keyword     sqfCommand      lbsetselected lbsettextright lbsettooltip
+syn keyword     sqfCommand      lbsetvalue lbsize lbsort lbsortbyvalue lbtext
+syn keyword     sqfCommand      lbtextright lbvalue leader leaderboarddeinit
 syn keyword     sqfCommand      leaderboardgetrows leaderboardinit
 syn keyword     sqfCommand      leaderboardrequestrowsfriends
 syn keyword     sqfCommand      leaderboardrequestrowsglobal
@@ -413,19 +414,21 @@ syn keyword     sqfCommand      preloadtitlersc primaryweapon
 syn keyword     sqfCommand      primaryweaponitems primaryweaponmagazine
 syn keyword     sqfCommand      priority private processdiarylink
 syn keyword     sqfCommand      productversion profilename profilenamespace
-syn keyword     sqfCommand      progressloadingscreen progressposition
-syn keyword     sqfCommand      progresssetposition publicvariable
-syn keyword     sqfCommand      publicvariableclient publicvariableserver
-syn keyword     sqfCommand      pushback putweaponpool queryitemspool
-syn keyword     sqfCommand      querymagazinepool queryweaponpool rad
-syn keyword     sqfCommand      radiochanneladd radiochannelcreate
-syn keyword     sqfCommand      radiochannelremove radiochannelsetcallsign
-syn keyword     sqfCommand      radiochannelsetlabel radiovolume rain rainbow
-syn keyword     sqfCommand      random rank rankid rating rectangular
-syn keyword     sqfCommand      registeredtasks registertask reload
-syn keyword     sqfCommand      reloadenabled remotecontrol removeaction
-syn keyword     sqfCommand      removeallactions removeallassigneditems
-syn keyword     sqfCommand      removeallcontainers removeallcuratoraddons
+syn keyword     sqfCommand      profilenamesteam progressloadingscreen
+syn keyword     sqfCommand      progressposition progresssetposition
+syn keyword     sqfCommand      publicvariable publicvariableclient
+syn keyword     sqfCommand      publicvariableserver pushback putweaponpool
+syn keyword     sqfCommand      queryitemspool querymagazinepool
+syn keyword     sqfCommand      queryweaponpool rad radiochanneladd
+syn keyword     sqfCommand      radiochannelcreate radiochannelremove
+syn keyword     sqfCommand      radiochannelsetcallsign radiochannelsetlabel
+syn keyword     sqfCommand      radiovolume rain rainbow random rank rankid
+syn keyword     sqfCommand      rating rectangular registeredtasks
+syn keyword     sqfCommand      registertask reload reloadenabled
+syn keyword     sqfCommand      remotecontrol remoteexec remoteexeccall
+syn keyword     sqfCommand      removeaction removeallactions
+syn keyword     sqfCommand      removeallassigneditems removeallcontainers
+syn keyword     sqfCommand      removeallcuratoraddons
 syn keyword     sqfCommand      removeallcuratorcameraareas
 syn keyword     sqfCommand      removeallcuratoreditingareas
 syn keyword     sqfCommand      removealleventhandlers removeallhandgunitems
