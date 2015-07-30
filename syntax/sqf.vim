@@ -669,16 +669,17 @@ syn keyword     sqfCommand      weaponstate weaponsturret weightrtd wfsidetext
 syn keyword     sqfCommand      wind winddir windrtd windstr wingsforcesrtd
 syn keyword     sqfCommand      worldname worldsize worldtomodel
 syn keyword     sqfCommand      worldtomodelvisual worldtoscreen
-"
-" What is included as a statement and what is left as a function is a bit "
-" arbitrary. Mostly it's anything that involves the CODE type or has anything to
-" do with controlling program flow and execution or whatever.
-syn keyword     sqfStatement    call callextension case commandfsm compile
-syn keyword     sqfStatement    compilefinal count default do dofsm else
-syn keyword     sqfStatement    execfsm execvm exitwith for foreach from if
+
+syn keyword     sqfStatement    commandfsm compile compilefinal dofsm
 syn keyword     sqfStatement    preprocessfile preprocessfilelinenumbers
-syn keyword     sqfStatement    scriptdone sleep spawn switch terminate then
-syn keyword     sqfStatement    to waituntil while
+syn keyword     sqfStatement    count
+
+syn keyword     sqfConditional  if then else case switch default
+
+syn keyword     sqfRepeat       for foreach from to while do
+
+syn keyword     sqfKeyword      call callextension scriptdone sleep spawn
+syn keyword     sqfKeyword      terminate waituntil execfsm execvm exitwith
 
 " Not sure about these ones ...
 syn keyword     sqfConstant     civilian controlnull displaynull east grpnull
@@ -706,9 +707,11 @@ syn match       sqfIncluded     display contained "<[^>]*>"
 syn match       sqfInclude      display "^\s*\(%:\|#\)\s*include\>\s*["<]" contains=sqfIncluded
 syn region      sqfPreProc      start="^\s*\(%:\|#\)\s*\(ifn\?def\|else\|endif\)" skip="\\$" end="$" keepend
 syn region      sqfDefine       start="^\s*\(%:\|#\)\s*\(define\|undef\)\>" skip="\\$" end="$" keepend
-syn match       sqfNumber       display "\d\+\(u\=l\{0,2}\|ll\=u\)\>"
+syn match       sqfNumber       display "\<\d\+\>"
 
 syn region      sqfLocalVar     display start="\<_\w" end="\>"
+
+syn match       sqfFunction     display "\<\w\+fnc\w\+\>"
 
 let b:current_syntax = "sqf"
 
@@ -726,5 +729,9 @@ hi def link     sqfNamespace    Keyword
 hi def link     sqfNumber       Number
 hi def link     sqfOperator     Operator
 hi def link     sqfPreProc      PreProc
-hi def link     sqfStatement    Keyword
+hi def link     sqfStatement    Statement
+hi def link     sqfConditional  Conditional
+hi def link     sqfRepeat       Repeat
+hi def link     sqfKeyword      Keyword
 hi def link     sqfString       String
+hi def link     sqfFunction     Function
