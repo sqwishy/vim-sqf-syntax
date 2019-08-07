@@ -12,7 +12,7 @@ import attr  # from the attrs package
 
 logger = logging.getLogger()
 
-LINE_WIDTH = 78
+LINE_WIDTH = 120
 LINE_PREFIX_WIDTH = 32
 
 HEADER = """\
@@ -45,8 +45,6 @@ syn region      sqfDefine       start="^\s*\(%:\|#\)\s*\(define\|undef\)\>" skip
 syn match       sqfNumber       display "\<\d\+\>"
 
 syn region      sqfLocalVar     display start="\<_\w" end="\>"
-
-syn match       sqfFunction     display "\<\w\+fnc\w\+\>"
 
 let b:current_syntax = "sqf"
 
@@ -85,6 +83,7 @@ WELL_KNOWN = (
             "execfsm",
             "execvm",
             "exitwith",
+            "private",
         ),
     ),
     Definition(
