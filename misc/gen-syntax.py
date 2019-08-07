@@ -184,8 +184,8 @@ def pad_prefix(txt):
 
 
 def write_output(output, txt):
-    print(txt)
-    output.write(txt + "\n")
+    args.output.write(txt + "\n")
+    logger.debug(txt)
 
 
 if __name__ == "__main__":
@@ -197,6 +197,7 @@ if __name__ == "__main__":
     p.add_argument("output", nargs="?", type=argparse.FileType("w"),
                    default=os.path.join("..", "syntax", "sqf.vim"))
     args = p.parse_args()
+    output = args.output
 
     known_words = set(sum((d.members for d in WELL_KNOWN), ()))
     commands = []
@@ -216,7 +217,7 @@ if __name__ == "__main__":
     definitions = (sqfCommand,) + WELL_KNOWN
 
     # Write output
-    write_output(args.output, HEADER.format(args.version))
+    write_output(output, HEADER.format(args.version))
 
     for defn in definitions:
         members = sorted("\\" + m if m.startswith("|") else m for m in defn.members)
@@ -225,11 +226,11 @@ if __name__ == "__main__":
 
         wrap = textwrap.wrap(text, initial_indent=prefix, subsequent_indent=prefix, width=LINE_WIDTH)
         for line in wrap:
-            write_output(args.output, line)
-        write_output(args.output, "")
+            write_output(output, line)
+        write_output(output, "")
 
-    write_output(args.output, WEIRD_MEMES)
+    write_output(output, WEIRD_MEMES)
 
     for defn in definitions:
         prefix = pad_prefix("hi def link     {}".format(defn.name))
-        write_output(args.output, "{}{}".format(prefix, defn.feature))
+        write_output(output, "{}{}".format(prefix, defn.feature))
