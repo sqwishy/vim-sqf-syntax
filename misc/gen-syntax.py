@@ -1,11 +1,13 @@
 r"""
 Takes the output from supportInfo to build the vim syntax highlighting file.
 
-Do sometihng like `copyToClipboard ((supportInfo "") joinString "\n")` and save your
+Do sometihng like `copyToClipboard ((supportInfo "") joinString endl)` and save your
 clipboard to a file and give the path as an argument to this script.
 """
 
 import sys
+import os
+import argparse
 import textwrap
 import logging
 import attr  # from the attrs package
@@ -181,19 +183,24 @@ def pad_prefix(txt):
     return txt + (" " * (32 - len(txt)))
 
 
+def write_output(output, txt):
+    print(txt)
+    output.write(txt + "\n")
+
+
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
-
-    import argparse
 
     p = argparse.ArgumentParser()
     p.add_argument("input", type=argparse.FileType("r"))
     p.add_argument("version")
-    a = p.parse_args()
+    p.add_argument("output", nargs="?", type=argparse.FileType("w"),
+                   default=os.path.join("..", "syntax", "sqf.vim"))
+    args = p.parse_args()
 
     known_words = set(sum((d.members for d in WELL_KNOWN), ()))
     commands = []
-    for line in a.input:
+    for line in args.input:
         txt = line.strip()
         if not txt:
             logger.debug("Line contains only whitespace, skipping ...")
@@ -202,28 +209,27 @@ if __name__ == "__main__":
         if cmd is None:
             continue
         elif cmd in known_words or cmd in commands:
-            logger.info("%s already recorded as something, skipping" % cmd)
+            logger.info("{} already recorded as something, skipping".format(cmd))
         else:
             commands.append(cmd)
     sqfCommand = Definition("sqfCommand", "Function", commands)
     definitions = (sqfCommand,) + WELL_KNOWN
 
     # Write output
-
-    print(HEADER.format(a.version))
+    write_output(args.output, HEADER.format(args.version))
 
     for defn in definitions:
         members = sorted("\\" + m if m.startswith("|") else m for m in defn.members)
         text = " ".join(members)
-        prefix = pad_prefix("syn keyword     %s " % (defn.name))
-        for line in textwrap.wrap(
-            text, initial_indent=prefix, subsequent_indent=prefix, width=LINE_WIDTH
-        ):
-            print(line)
-        print("")
+        prefix = pad_prefix("syn keyword     {} ".format(defn.name))
 
-    print(WEIRD_MEMES)
+        wrap = textwrap.wrap(text, initial_indent=prefix, subsequent_indent=prefix, width=LINE_WIDTH)
+        for line in wrap:
+            write_output(args.output, line)
+        write_output(args.output, "")
+
+    write_output(args.output, WEIRD_MEMES)
 
     for defn in definitions:
-        prefix = pad_prefix("hi def link     %s" % (defn.name))
-        print("%s%s" % (prefix, defn.feature))
+        prefix = pad_prefix("hi def link     {}".format(defn.name))
+        write_output(args.output, "{}{}".format(prefix, defn.feature))
