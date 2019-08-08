@@ -466,7 +466,7 @@ hi def link sqfBraces       sqfDelimiter
 hi def link sqfDelimiter    Delimiter
 
 " START HI GEN
-hi def link sqfCommand      Special
+hi def link sqfCommand      Function
 hi def link sqfKeyword      Keyword
 hi def link sqfRepeat       Repeat
 hi def link sqfConditional  Conditional

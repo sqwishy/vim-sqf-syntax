@@ -182,7 +182,7 @@ if __name__ == "__main__":
 
     args.input.close()
 
-    sqfCommand = Definition("keyword", "sqfCommand", "Special", commands)
+    sqfCommand = Definition("keyword", "sqfCommand", "Function", commands)
     definitions = (sqfCommand,) + PREDEFINED_GEN
 
     # Write output
