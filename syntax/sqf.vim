@@ -422,7 +422,6 @@ syn match   sqfCommand      "#"
 syn match   sqfOperator     ">>\|&&\|||"
 syn match   sqfOperator     "[!*/%<>^=,+-]"
 syn match   sqfOperator     "&&\|||"
-syn match   sqfOperator     "[][]"
 
 " Misc
 syn keyword sqfTodo         TODO FIXME XXX contained
@@ -447,6 +446,7 @@ syn match   sqfMacro        "\<\h\w*\>\(\s\|\n\)*("me=e-1
 " Delimiters
 syn match   sqfBraces       display "[{}]"
 syn match   sqfDelimiter    "[();\\]"
+syn match   sqfDelimiter    "[][]"
 
 let b:current_syntax = "sqf"
 
